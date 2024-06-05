@@ -1,32 +1,35 @@
-function calculateBarbecueItems(adultosAcool, AdultosNOalcool, criancas) {
-    const carneAdulto = 400;
-    const acompanhamentosAdulto = 200;
-    const cerveja = 2;
-    const refrigeranteAdulto = 0.5;
-    const aguaAdulto = 0.4;
+
+ document.getElementById('churrasquinho').addEventListener('submit', function(event) {
+  event.preventDefault();
   
-    const carneCrianca = 200;
-    const acompanhamentosCrianca = 200;
-    const refrigeranteCrianca = 0.5;
-    const aguaCrianca = 0.4;
+  // Variáveis para o input
+  const AdultosqBEBEM = parseInt(document.getElementById('AdultosqBEBEM').value);
+  const AdultosNbebem = parseInt(document.getElementById('AdultosNbebem').value);
+  const criancas = parseInt(document.getElementById('criancas').value);
+
+  // 1. Cálculo para o churrasco
+  // 2. Valores dos números em gramas ou litros
+  const Carne = (AdultosNbebem + AdultosqBEBEM) * 400 + criancas * 200; // gramas
+  const Acompanhamentos = (AdultosNbebem + AdultosqBEBEM + criancas) * 200; // gramas
+  const cerveja = AdultosqBEBEM * 2; // Litros
+  const refrigerante = (AdultosNbebem + criancas) * 0.5; // Litros
+  const agua = (criancas + AdultosNbebem + AdultosqBEBEM) * 0.4; // Litros
   
-    let carneTotal = (adultosAcool * carneAdulto) + (AdultosNOalcool * carneAdulto) + (criancas * carneCrianca);
-    let acompanhamentosTotal = (adultosAcool * acompanhamentosAdulto) + (AdultosNOalcool * acompanhamentosAdulto) + (criancas * acompanhamentosCrianca);
-    let cervejaTotal = (adultosAcool + AdultosNOalcool) * cerveja;
-    let refrigeranteTotal = (adultosAcool + AdultosNOalcool + criancas) * refrigeranteAdulto * refrigeranteCrianca;
-    let aguaTotal = (adultosAcool + AdultosNOalcool + criancas) * aguaAdulto * aguaCrianca;
-  
-    carneTotal /= 1000; // convert grams to kilograms
-    acompanhamentosTotal /= 1000; // convert grams to kilograms
-  
-    console.log("--- Churrasco ---");
-    console.log("Carne.............: " + carneTotal.toFixed(1) + "kg");
-    console.log("Acompanhamentos...: " + acompanhamentosTotal.toFixed(1) + "kg");
-    console.log("Cerveja...........: " + cervejaTotal.toFixed(1) + "l");
-    console.log("Refrigerante......: " + refrigeranteTotal.toFixed(1) + "l");
-    console.log("Água..............: " + aguaTotal.toFixed(1) + "l");
-    console.log("Fonte: Sociedade da Carne");
-  }
-  
-  // Example usage
-  calculateBarbecueItems(5, 3, 6);
+  // Exibir no HTML
+  document.getElementById('resultado').innerHTML = `
+
+    
+    <div class="cx">
+      <h1 class="titulo">Itens do churrasco</h1>
+
+      <div class="AXL">
+      <h4>Carne: ${Carne}g</h4>
+      <h4>Acompanhamentos: ${Acompanhamentos}g</h4>
+      <h4>Cerveja: ${cerveja}L</h4>
+      <h4>Refrigerante: ${refrigerante}L</h4>
+      <h4>Água: ${agua}L</h4>
+      </div>
+
+    </div>
+  `;
+});

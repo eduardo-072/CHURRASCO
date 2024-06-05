@@ -3,13 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="main.js"></script>
     <title>Churrasco pro povo</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1></h1>
+    <h1>Churras de dominguin</h1>
+        <div class="caixa">
+            <form id="churrasquinho">
+                <div>
+                    <label for="AdultosqBEBEM">Adultos que são pinguços</label>
+                    <input type="number" id="AdultosqBEBEM" required>
+                </div>
 
+                <div>
+                    <label for="AdultosNbebem">Adultos que não são pinguços</label>
+                    <input type="number" id="AdultosNbebem" required>
+                </div>
+
+                <div>
+                    <label for="criancas">Crianças</label>
+                    <input type="number" id="criancas" required>
+                </div>
+
+                <button class="btn" type="submit">Aperta aqui arrombado</button>
+            </form>
+            <div class="resultado" id="resultado"></div>
+        </div>
     <script src="main.js"></script>
-    
 </body>
 </html>
