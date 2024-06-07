@@ -4,31 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Churrasco pro povo</title>
+
     <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <h1>Churras de dominguin</h1>
-        <div class="caixa">
-            <form id="churrasquinho">
-                <div>
-                    <label for="AdultosqBEBEM">Adultos que são pinguços</label>
-                    <input type="number" id="AdultosqBEBEM" required>
-                </div>
+    <div class="titulo">
+        <h1><strong>Churras de dominguin</strong></h1>
+    </div>
+    <div class="formatacao">
+        <h1 class="h1">Calcule aqui</h1><br>
+        <div class="linha"></div>
+        
+    <form id="churrasquinho">
+        <div class="formacao">
+            <div class="form">
+                <label id="Spinga" for="AdultosqBEBEM"><Strong>Adultos que são pinguços</Strong></label>
+                <input class="input-1" type="number" id="AdultosqBEBEM" required>
+            </div>
 
-                <div>
-                    <label for="AdultosNbebem">Adultos que não são pinguços</label>
-                    <input type="number" id="AdultosNbebem" required>
-                </div>
+            <div class="form">
+                <label id="Npinga" for="AdultosNbebem"><Strong>Adultos que não são pinguços</Strong></label>
+                <input class="input-2" type="number" id="AdultosNbebem" required>
+            </div>
 
-                <div>
-                    <label for="criancas">Crianças</label>
-                    <input type="number" id="criancas" required>
-                </div>
-
-                <button class="btn" type="submit">Aperta aqui</button>
-            </form>
-            <div class="resultado" id="resultado"></div>
+            <div class="form">
+                <label id="kid" for="criancas"><strong>Crianças</strong></label>
+                <input class="input-3" type="number" id="criancas" required>
+            </div>
+                <div></div>
         </div>
+        <div class="linha-2"></div>
+            <div class="title">
+                <h1>Itens do churrasco</h1>
+            </div>   
+            <button class="btn" type="submit">Aperta aqui</button>
+    </form>
+        <div id="icon-1" class="icons">
+            <ul>
+                 <img src="carne_icon.png" alt="">
+            </ul>
+        </div>
+
+        <div id="icon-2" class="icons">
+            <ul>
+                <img src="/cerveja_icon.png" alt="">  
+            </ul>
+        </div>
+        <div id="icon-3" class="icons">
+            <ul>
+                <img src="/acompanhamentos_icon.png" alt="">
+            </ul>
+        </div>
+
+        <div id="icon-4" class="icons">
+            <ul>
+                <img src="refri_icon.png" alt="">
+            </ul>
+         </div>
+        <div id="icon-5" class="icons">
+            <ul>
+                <img src="agua_icon.png" alt="">
+            </ul>
+        </div>
+            
+        <div class="resultado" id="resultado"></div>
+    </div>
     <script src="main.js"></script>
 </body>
 </html>
+
+

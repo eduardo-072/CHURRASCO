@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+form {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+}
+
+label {
+    margin-right: 10px;
+    width: 50px;
+    text-align: right;
+}
+
+.form .input-3 {
+    margin-left: 10px;
+}
+button {
+    margin-top: 20px;
+}

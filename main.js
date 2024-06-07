@@ -1,5 +1,4 @@
-
- document.getElementById('churrasquinho').addEventListener('submit', function(event) {
+document.getElementById('churrasquinho').addEventListener('submit', function(event) {
   event.preventDefault();
   
   // Variáveis para o input
@@ -17,19 +16,14 @@
   
   // Exibir no HTML
   document.getElementById('resultado').innerHTML = `
-
-    
     <div class="cx">
-      <h1 class="titulo">Itens do churrasco</h1>
-
       <div class="AXL">
-      <h4>Carne: ${Carne}g</h4>
-      <h4>Acompanhamentos: ${Acompanhamentos}g</h4>
-      <h4>Cerveja: ${cerveja}L</h4>
-      <h4>Refrigerante: ${refrigerante}L</h4>
-      <h4>Água: ${agua}L</h4>
-      </div>
-
+        <h4 id="iten-1" class="itens"> Carne Kg<br>&nbsp&nbsp&nbsp${(Carne / 1000).toFixed(2)}</h4>
+        <h4 id="iten-2" class="itens"> Cerveja<br>&nbsp&${cerveja.toFixed(2)} L</h4>
+        <h4 id="iten-3" class="itens">Acompanhamentos <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp${(Acompanhamentos / 1000).toFixed(2)}Kg</h4>
+        <h4 id="iten-4" class="itens"> Refrigerante <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp${refrigerante.toFixed(2)}L</h4>
+        <h4 id="iten-5" class="itens"> Água <br>${agua.toFixed(2)}L<br></h4>
     </div>
   `;
 });
+
